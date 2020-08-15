@@ -1,13 +1,22 @@
+body {
+    font-family: 'Lobster Two', cursive;
+}
 .highscores {
     float: left;
+    font-family: 'Lobster Two', cursive;
 }
-.timer {
+#time {
     float: right;
+    font-family: 'Lobster Two', cursive;
 }
 .container {
     padding: 10px;
-    margin: auto;
 }
 .button {
     display: grid;
+    font-family: 'Lobster Two', cursive;
+}
+#start {
+    display: grid;
+    font-family: 'Lobster Two', cursive; 
 }

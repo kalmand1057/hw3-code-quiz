@@ -1,20 +1,10 @@
 var startButton = document.getElementById("start");
 var timeEl = document.getElementById("time");
 
-startButton.addEventListener("click", startQuiz);
+
 startButton.addEventListener("click", setTimer);
 
-function startQuiz() {
-    console.log("Start!");
-}
 
-function nextQuestion() {
-
-}
-
-function selectAnswer() {
-
-}
 
 //QUESTIONS
 var questions = [
@@ -43,13 +33,45 @@ var questions = [
     options: ["Camel Case", "Snake Case", "Pascal Case"],
     answerIdx: 0
   },
-]
+];
+
+var currentQuestionsIdx = 0;
+renderQuestion();
+
+//FUNCTIONS
+function initQuestion() {
+  $(".option").on("click", function () {
+    var correctAnsIdx = questions[currentQuestionsIdx].answerIdx;
+    console.log($(this).text());
+    if($(this).text() === questions[currentQuestionsIdx].options[correctAnsIdx]) {
+      alert("correct!");
+      currentQuestionsIdx++;
+      renderQuestion();
+    } else {
+      alert("Incorrect!");
+    }
+  })
+}
+
+
+function renderQuestion() {
+  $("#question").text(questions[currentQuestionsIdx].question);
+  var options = questions[currentQuestionsIdx].options;
+  $("#options").html("");
+  for (var i = 0; i < options.length; i++) {
+    var newOptions = $("<button>");
+    $("#options").append(newOptions);
+  }
+  initQuestion();
+}
 
 //TIMER
 
-var secondsLeft = 120;
+
 
 function setTimer() {
+  var secondsLeft = 120;
+
     var timeInterval = setInterval(function() {
       secondsLeft--;
       timeEl.textContent = "Timer: " + secondsLeft;

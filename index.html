@@ -9,20 +9,24 @@
 
     <!--Google font-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </head>
 <body>
     <button class="highscores">View Highscores</button>
     <button id="time">Timer</button>
     <div class="start">
-        <button id="start">Start</button>
+        <button id="start">Click here to Start!</button>
     </div>
-    <div class="container border border-dark">
-        <h1>Coding Quiz</h1>.
-        <p>Question goes here</p>
-        <button class="button">Choice 1</button>
-        <button class="button">Choice 2</button>
-        <button class="button">Choice 3</button>
-        <button class="button">Choice 4</button>
+    <div class="container">
+        <h1 id="question">Coding Quiz</h1>
+        <div id="options">
+            <button id="option1Btn" class="option">Choice 1</button>
+            <button id="option2Btn" class="option">Choice 2</button>
+            <button id="option3Btn" class="option">Choice 3</button>
+        </div>
     </div>
     <!--Javascript-->
     <script src="./script.js"></script>

@@ -16,7 +16,7 @@ body {
     justify-items: center;
     align-items: center;
 }
-.button {
+.option {
     display: grid;
     font-family: 'Lobster Two', cursive;
 }

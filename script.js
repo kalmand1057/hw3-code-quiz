@@ -18,16 +18,16 @@ function selectAnswer() {
 
 //TIMER
 
-var secondsLeft = 60;
+var secondsLeft = 120;
 
 function setTimer() {
     var timeInterval = setInterval(function() {
       secondsLeft--;
       timeEl.textContent = "Timer: " + secondsLeft;
   
-      if(secondsLeft === 0) {
+      if(secondsLeft <= 0) {
         clearInterval(timeInterval);
       }
   
-    }, 6000);
+    }, 1000);
   }

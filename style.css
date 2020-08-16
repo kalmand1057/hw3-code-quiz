@@ -1,5 +1,6 @@
 body {
     font-family: 'Lobster Two', cursive;
+    background-color: lightseagreen;
 }
 .highscores {
     float: left;
@@ -11,12 +12,17 @@ body {
 }
 .container {
     padding: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 .button {
     display: grid;
     font-family: 'Lobster Two', cursive;
 }
-#start {
+.start {
+    font-family: 'Lobster Two', cursive;
     display: grid;
-    font-family: 'Lobster Two', cursive; 
+    justify-items: center;
+    align-items: center;
 }
